@@ -18,39 +18,44 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
 		<![endif]-->
-		
+		<style>
+		.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+			color:#fff;
+			background-color: #CC0000;
+		}
+
+		</style>
 	</head>
 	<body>
-		<div id="header">
-			<div class="container">
-				<div role="navigation" class="navbar navbar-default">
+		<div id="header" style="margin-top:0px;">
+				<div role="navigation" class="navbar navbar-default" style="background-color:DarkRed;width:100%;border-radius:0px">
 					<div class="container-fluid">
 						<div class="navbar-header">
 							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 							</button>
-							<a href="/" class="navbar-brand">systems-website</a>
+							<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p160x160/179378_132500423483114_1446646_n.jpg?oh=879419fb87f9f1436c04858143f9e962&oe=54F5AA98&__gda__=1424486133_cb2cbf504e4ae5b4b37963da2f1bb4fe" height="40" width="40" style="margin-right:10px;margin-top:5px">
+							<img src="http://s3.amazonaws.com/libapps/accounts/7637/images/british_library1.jpg" height="40" width="40" style="margin-right:10px;margin-top:5px">
 						</div>
 						<div class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-left">
 									{{# each navLinks}}
 									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-										<a href="{{ href }}">{{ label }}</a>
+										<a href="{{ href }}" style="color:#fff">{{ label }}</a>
 									</li>
 								{{/each}}
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
+								<li><a href="/keystone/signout" style="color:#fff">Sign Out</a></li>
 								{{else}}
-								<li><a href="/keystone/signin">Sign In</a></li>
+								<li><a href="/keystone/signin" style="color:#fff">Sign In</a></li>
 								{{/if}}
 							</ul>
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 		<div id="body">
 			<!--
